@@ -1,0 +1,22 @@
+# Default values for first-child chart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+appName: "first-child"
+kubeApiVersion: "apps/v1"
+replicaCount: 1
+
+image:
+  imageName: nginx
+  tag: latest
+
+service:
+  type: ClusterIP
+  port: 8080
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 10
+
+
